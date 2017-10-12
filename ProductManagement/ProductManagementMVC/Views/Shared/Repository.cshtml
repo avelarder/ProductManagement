@@ -1,0 +1,10 @@
+﻿@model ProductManagementMVC.Models.RepositoryModel
+
+@using (Html.BeginForm("Repository", "Shared", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.EnumDropDownListFor(model => model.SelectedOption, null, new { @class = "form-control" })
+    <input type="submit" value="Change" class="btn btn-group-sm" />
+}
+
